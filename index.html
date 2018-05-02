@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sistema de Inventario v 2.0</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Hacemos el include de los js personalizados -->
+<!--     <script src="inventario/inventario.js" charset="utf-8"></script>
+    <script src="vistas/vista.js" charset="utf-8"></script>
+    <script src="controladores/main.js" charset="utf-8"></script> -->
+    
+    <script src="modelos/estudiantes.js" charset="utf-8"></script>
+    <script src="vistas/estudiantes.js" charset="utf-8"></script>
+    <script src="controladores/estudiantes.js" charset="utf-8"></script>
+<style>
+  body {
+  padding-top: 5rem;
+}
+#agregar-estudiante {
+  margin-top: 20px;
+}
+</style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">Proyecto Final</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="accordion">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" data-toggle="collapse" href="#agregar-estudiante" role="button" aria-expanded="false" aria-controls="agregar-estudiante">Formulario <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#estudiantes" role="button" aria-expanded="false" aria-controls="estudiantes">Estudiantes</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+        
+        <div class="col-md-12 text-center collapse" id="estudiantes">
+          <button class="btn btn-primary" id="btnMostrarNotaPromedio">Mostrar Promedio</button>
+          <button class="btn btn-primary" id="btnMostrarNotaMayor">Mostrar Nota Mayor</button>
+          <button class="btn btn-primary" id="btnMostrarNotaMenor">Mostrar Nota Menor</button>
+
+          <div id="lista-estudiantes" class="text-center"></div>
+        </div>
+
+        <div class=" d-block mx-auto col-sm-4">
+          <form class="alert alert-primary collapse show" id="agregar-estudiante">
+          <div class="form-group">
+            <label for="txtId">Codigo</label>
+            <input type="text"  class="form-control" id="txtCodigo" name="txtCodigo" value="" placeholder="Codigo identificación del estudiante">
+          </div>
+          <div class="form-group">
+            <label for="txtNombre">Nombre</label>
+            <input type="text"  class="form-control" id="txtNombre" name="txtNombre" value="" placeholder="Nombre con sus apellidos">
+          </div>
+          <div class="form-group">
+            <label for="txtNota">Nota</label>
+            <input type="text"  class="form-control" id="txtNota" name="txtNota" value="" placeholder="Nota - Escala de 10">
+          </div>
+          <hr>          
+          <button type="button" class="btn btn-primary" id="btnAgregar">Guardar datos</button>
+        </form>
+        </div>
+        
+      </div>
+    </div>
+
+
+  </body>
+</html>
